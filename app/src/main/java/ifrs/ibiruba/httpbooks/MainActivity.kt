@@ -7,7 +7,7 @@ import kotlinx.android.synthetic.main.fragment_books_list.*
 import kotlinx.android.synthetic.main.item_book.*
 
 class MainActivity : AppCompatActivity() {
-    val books : List<Book> = TODO()
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,13 +26,13 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+        
+
+}
 
 
 
-
-
-
-}}
+}
 
 
 

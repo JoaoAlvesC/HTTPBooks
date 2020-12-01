@@ -52,6 +52,14 @@ class BooksListFragment: Fragment() {
             }
         }
 
+        listView.setOnItemLongClickListener { parent, view, position, id ->
+            booksList.removeAt(position)
+            (adapter as BookListAdapter).notifyDataSetChanged()
+            listView.refreshDrawableState()
+            return@setOnItemLongClickListener(true)
+
+        }
+
 
     }
 
