@@ -19,8 +19,7 @@ class MainActivity : AppCompatActivity() {
         listView.setOnItemClickListener { parent, view, position, id ->
             val book = parent.getItemAtPosition(position) as? Book
             if (book != null) {
-                val (title,author, year) = book
-                Toast.makeText(this, "$year", Toast.LENGTH_LONG).show()
+                Toast.makeText(this, "${book.title}, \n ${book.author}, \n ${book.year} ", Toast.LENGTH_LONG).show()
 
 
         }

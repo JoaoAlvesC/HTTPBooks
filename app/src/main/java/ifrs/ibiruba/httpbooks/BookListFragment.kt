@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import kotlinx.android.synthetic.main.fragment_books_list.*
 
@@ -53,10 +54,13 @@ class BooksListFragment: Fragment() {
         }
 
         listView.setOnItemLongClickListener { parent, view, position, id ->
+
             booksList.removeAt(position)
+
             (adapter as BookListAdapter).notifyDataSetChanged()
             listView.refreshDrawableState()
             return@setOnItemLongClickListener(true)
+
 
         }
 
